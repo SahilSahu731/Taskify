@@ -1,19 +1,14 @@
 import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/clerk-react'
 import './App.css'
+import { Outlet } from 'react-router-dom'
 
 function App() {
 
   return (
-    <>
-      <header className="App-header">
-      <SignedOut>
-        <SignInButton />
-      </SignedOut>
-      <SignedIn>
-        <UserButton />
-      </SignedIn>
-    </header>
-    </>
+    <div className="min-h-screen p-4">
+      {/* Optional: Add a Navbar here */}
+      <Outlet />
+    </div>
   )
 }
 
