@@ -1,15 +1,13 @@
-import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/clerk-react'
-import './App.css'
-import { Outlet } from 'react-router-dom'
+import { Outlet } from "react-router-dom";
+import Navbar from "./components/Navbar";
 
-function App() {
-
+export default function App() {
   return (
-    <div className="min-h-screen p-4">
-      {/* Optional: Add a Navbar here */}
-      <Outlet />
+    <div className="min-h-screen flex flex-col">
+      <Navbar />
+      <main className="flex-1 container mx-auto px-4 py-6">
+        <Outlet />
+      </main>
     </div>
-  )
+  );
 }
-
-export default App
