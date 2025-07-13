@@ -9,11 +9,11 @@ import {
 
 export default function Navbar() {
   return (
-    <nav className="flex justify-between items-center px-8 py-6 bg-gradient-to-r from-gray-800 via-zinc-900 to-slate-800 shadow-lg border-b border-gray-600">
+    <nav className="w-full fixed flex justify-between items-center px-8 py-6 bg-gradient-to-r from-gray-800 via-zinc-900 to-slate-800 shadow-lg border-b border-gray-600">
       {/* Left - App Name / Logo */}
       <div className="flex items-center gap-4">
         <img src="/taskify.svg" alt="Taskify Logo" className="h-8 w-8" />
-        <Link to="/" className="text-2xl font-extrabold text-white tracking-wide drop-shadow-lg hover:scale-105 transition-transform">Taskify</Link>
+        <Link to="/" className="text-2xl font-dancing font-extrabold text-white tracking-wide drop-shadow-lg hover:scale-105 transition-transform">Taskify</Link>
       </div>
 
       {/* Middle - Navigation Links */}
@@ -56,9 +56,9 @@ export default function Navbar() {
 
         <SignedIn>
           <div className="flex items-center gap-3">
-            <UserButton afterSignOutUrl="/" appearance={{ elements: { avatarBox: 'w-10 h-10 scale-110' } }} />
+            <UserButton redirectTo="/dashboard" appearance={{ elements: { avatarBox: 'w-12 h-12 scale-110' } }} />
             <SignOutButton>
-              <button className="bg-red-600 text-white px-4 py-2 hover:px-10 rounded font-semibold shadow hover:bg-red-700 hover:scale-105 transition-all duration-200">Sign Out</button>
+              <button className="bg-red-600 text-white px-4 py-2 rounded hover:px-10 font-semibold shadow hover:bg-red-700 hover:scale-105 transition-all duration-700">Sign Out</button>
             </SignOutButton>
           </div>
         </SignedIn>
