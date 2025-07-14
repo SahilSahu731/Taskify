@@ -17,7 +17,7 @@ export default function Navbar() {
       </div>
 
       {/* Middle - Navigation Links */}
-      <div className="flex gap-6 text-lg font-semibold">
+      <div className="hidden md:flex gap-6 text-lg font-semibold">
         <NavLink
           to="/"
           className={({ isActive }) =>
@@ -58,7 +58,7 @@ export default function Navbar() {
           <div className="flex items-center gap-3">
             <UserButton redirectTo="/dashboard" appearance={{ elements: { avatarBox: 'w-12 h-12 scale-110' } }} />
             <SignOutButton>
-              <button className="bg-red-600 text-white px-4 py-2 rounded hover:px-10 font-semibold shadow hover:bg-red-700 hover:scale-105 transition-all duration-700">Sign Out</button>
+              <button className="bg-red-600 hidden md:flex text-white px-4 py-2 rounded hover:px-10 font-semibold shadow hover:bg-red-700 hover:scale-105 transition-all duration-700">Sign Out</button>
             </SignOutButton>
           </div>
         </SignedIn>
